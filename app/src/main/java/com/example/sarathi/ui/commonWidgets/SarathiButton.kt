@@ -12,10 +12,10 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.sarathi.ui.theme.BlueGreen
+import com.example.sarathi.ui.theme.Sarathi_Yellow
 
 @Composable
-fun OSButton(
+fun SarathiButton(
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
     text: String,
@@ -24,13 +24,18 @@ fun OSButton(
     Button(
         modifier = modifier
             .padding(vertical = 10.dp, horizontal = 40.dp)
-            .fillMaxWidth()
-            .height(50.dp),
+            .wrapContentWidth()
+            .wrapContentHeight(),
         onClick = onClick,
-        colors = ButtonDefaults.outlinedButtonColors(contentColor = BlueGreen),
+        colors = ButtonDefaults.outlinedButtonColors(
+            contentColor = Sarathi_Yellow
+        ),
         shape = shape,
-        border = BorderStroke(3.dp, BlueGreen),
+        border = BorderStroke(3.dp, Sarathi_Yellow),
     ) {
-        Text(text, style = TextStyle(fontSize = 20.sp,fontWeight = FontWeight.Bold))
+        Text(
+            text = text,
+            style = TextStyle(fontSize = 20.sp,fontWeight = FontWeight.Bold)
+        )
     }
 }
