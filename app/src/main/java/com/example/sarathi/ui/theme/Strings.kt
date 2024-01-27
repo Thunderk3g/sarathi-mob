@@ -1,3 +1,3 @@
 package com.example.sarathi.ui.theme
 
-const val TEST_TEXT = "Sarathi"
+const val APP_NAME = "Sarathi"

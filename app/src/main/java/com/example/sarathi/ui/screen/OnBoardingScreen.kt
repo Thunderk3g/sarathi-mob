@@ -21,6 +21,7 @@ import androidx.navigation.NavHostController
 import com.example.sarathi.Routes
 import com.example.sarathi.ui.commonWidgets.SarathiButton
 import com.example.sarathi.ui.commonWidgets.SarathiTextField
+import com.example.sarathi.ui.theme.APP_NAME
 import com.example.sarathi.ui.theme.DarkGrey
 import com.example.sarathi.ui.theme.RoseRed
 import com.example.sarathi.ui.theme.Sarathi_Yellow
@@ -41,7 +42,7 @@ fun OnBoardingScreen(
         var contact by remember { mutableStateOf("") }
 
         Text(
-            text = "Sarathi",
+            text = APP_NAME,
             style = TextStyle(
                 fontSize = 40.sp,
                 color = Sarathi_Yellow,

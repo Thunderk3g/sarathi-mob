@@ -12,7 +12,7 @@ import com.example.sarathi.Routes
 fun ScreenMain() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = Routes.OnBoardingScreen.route) {
+    NavHost(navController = navController, startDestination = Routes.Home.route) {
 
         composable(Routes.OnBoardingScreen.route) {
             OnBoardingScreen(navController = navController)
@@ -24,6 +24,14 @@ fun ScreenMain() {
 
         composable(Routes.Home.route) {
             HomeScreen(navController = navController)
+        }
+
+        composable(Routes.Profile.route) {
+            ProfileScreen(navController = navController)
+        }
+
+        composable(Routes.OrderHistory.route) {
+            OrderHistory(navController = navController)
         }
     }
 }

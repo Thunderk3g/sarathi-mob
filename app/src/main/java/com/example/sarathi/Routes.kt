@@ -1,8 +1,10 @@
 package com.example.sarathi
 
 sealed class Routes(val route: String) {
-    object OnBoardingScreen : Routes("OnBoarding")
-    object OTPScreen : Routes("OTPScreen")
-    object Home : Routes("Home")
+    data object OnBoardingScreen : Routes("OnBoarding")
+    data object OTPScreen : Routes("OTPScreen")
+    data object Home : Routes("Home")
+    data object Profile : Routes("Profile")
+    data object OrderHistory : Routes("History")
 
 }
