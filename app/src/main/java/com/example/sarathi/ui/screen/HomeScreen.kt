@@ -28,7 +28,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
@@ -40,6 +39,7 @@ import com.example.sarathi.R
 import androidx.navigation.NavHostController
 import com.example.sarathi.Routes
 import com.example.sarathi.ui.theme.APP_NAME
+import com.example.sarathi.ui.theme.Baby_Yellow
 import com.example.sarathi.ui.theme.Sarathi_Yellow
 import kotlinx.coroutines.launch
 
@@ -59,14 +59,16 @@ fun HomeScreen(navController: NavHostController) {
     Surface {
         ModalNavigationDrawer(
             drawerContent = {
-                ModalDrawerSheet {
+                ModalDrawerSheet(
+                    drawerContainerColor = Color.White,
+                    drawerContentColor = Color.Black
+                ) {
                     Spacer(modifier = Modifier.height(26.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.user_icon),
+                        painter = painterResource(id = R.drawable.sarathi_logo),
                         contentDescription = "",
-                        colorFilter = ColorFilter.tint(Sarathi_Yellow),
                         modifier = Modifier
-                            .size(100.dp)
+                            .size(150.dp)
                             .fillMaxWidth()
                             .align(Alignment.CenterHorizontally)
                     )
@@ -75,9 +77,16 @@ fun HomeScreen(navController: NavHostController) {
                         NavigationDrawerItem(
                             label = {
                                 Text(
-                                    text = drawerItem.route
+                                    text = drawerItem.route,
+                                    fontWeight = FontWeight.Bold
                                 )
                             },
+                            colors = NavigationDrawerItemDefaults.colors(
+                                selectedContainerColor = Baby_Yellow,
+                                unselectedContainerColor = Color.White,
+                                selectedTextColor = Color.Black,
+                                unselectedTextColor = Color.Black,
+                            ),
                             selected = index == selectedItemIndex,
                             onClick = {
                                 selectedItemIndex = index
@@ -99,32 +108,37 @@ fun HomeScreen(navController: NavHostController) {
                     TopAppBar(
                         colors = topAppBarColors(containerColor = Color.Black),
                         title = {
-                            Text(
-                                text = APP_NAME,
-                                fontSize = 25.sp,
-                                textAlign = TextAlign.Center,
-                                color = Sarathi_Yellow,
-                                style = TextStyle(
-                                    fontWeight = FontWeight.Bold,
-                                    fontStyle = FontStyle.Italic
-                                ),
-                                modifier = Modifier
-                                    .padding(16.dp)
-                                    .wrapContentWidth()
-                            )
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.Start,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = APP_NAME,
+                                    fontSize = 30.sp,
+                                    textAlign = TextAlign.Center,
+                                    color = Sarathi_Yellow,
+                                    style = TextStyle(
+                                        fontWeight = FontWeight.Bold,
+                                        fontStyle = FontStyle.Italic
+                                    ),
+                                    modifier = Modifier
+                                        .padding(start = 20.dp)
+                                        .wrapContentWidth()
+                                )
+                            }
                         },
                         navigationIcon = {
-                            IconButton(onClick = {
-                                scope.launch {
-                                    navigationState.open()
-                                }
-                            }) {
+                            IconButton(
+                                modifier = Modifier.padding(start = 25.dp, top = 5.dp),
+                                onClick = {
+                                    scope.launch {
+                                        navigationState.open()
+                                    }
+                                }) {
                                 Icon(
                                     imageVector = Icons.Default.Menu,
                                     contentDescription = "Menu",
-                                    modifier = Modifier
-                                        .padding(start = 16.dp)
-                                        .size(50.dp),
                                     tint = Sarathi_Yellow
                                 )
                             }

@@ -28,7 +28,7 @@ import com.example.sarathi.ui.theme.Sarathi_Yellow
 
 @Composable
 fun OnBoardingScreen(
-    navController: NavHostController
+    navController: NavHostController,
 ) {
 
     val showDialog = remember { mutableStateOf(false) }
@@ -91,17 +91,21 @@ fun OnBoardingScreen(
                     )
                 }
             },
-            title = { Text(
-                text = "Invalid Login Credentials",
-                fontSize = 20.sp,
-                color = RoseRed,
-                style = TextStyle(fontWeight = FontWeight.Bold))
-             },
-            text = { Text(
-                text = message,
-                fontSize = 15.sp,
-                color = DarkGrey,
-                style = TextStyle(fontWeight = FontWeight.Bold))
+            title = {
+                Text(
+                    text = "Invalid Login Credentials",
+                    fontSize = 20.sp,
+                    color = RoseRed,
+                    style = TextStyle(fontWeight = FontWeight.Bold)
+                )
+            },
+            text = {
+                Text(
+                    text = message,
+                    fontSize = 15.sp,
+                    color = DarkGrey,
+                    style = TextStyle(fontWeight = FontWeight.Bold)
+                )
             }
         )
     }
