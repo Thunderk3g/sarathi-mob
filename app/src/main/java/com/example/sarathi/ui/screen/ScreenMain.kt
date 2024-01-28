@@ -151,7 +151,7 @@ fun ScreenMain() {
                 }
 
                 composable(Routes.Home.route) {
-                    HomeScreen(navController = navController)
+                    HomeScreen(navController = navController, navigationState)
                 }
 
                 composable(Routes.Profile.route) {
