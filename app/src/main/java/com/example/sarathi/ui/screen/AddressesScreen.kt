@@ -14,7 +14,7 @@ import androidx.navigation.NavHostController
 import com.example.sarathi.ui.theme.Sarathi_Yellow
 
 @Composable
-fun PastRides(
+fun AddressesScreen(
     navController: NavHostController
 ) {
     Column(
@@ -23,7 +23,7 @@ fun PastRides(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Past Rides",
+            text = "Addresses",
             style = TextStyle(
                 fontSize = 40.sp,
                 color = Sarathi_Yellow,

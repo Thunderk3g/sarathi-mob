@@ -1,4 +1,4 @@
-package com.example.sarathi.ui.commonWidgets
+package com.example.sarathi.ui.commonUi
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight

@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.sarathi.Routes
+import com.example.sarathi.ui.commonUi.Routes
 
 @SuppressLint("UnrememberedMutableState")
 @Composable
@@ -30,8 +30,16 @@ fun ScreenMain() {
             ProfileScreen(navController = navController)
         }
 
-        composable(Routes.OrderHistory.route) {
-            OrderHistory(navController = navController)
+        composable(Routes.PastRides.route) {
+            PastRides(navController = navController)
+        }
+
+        composable(Routes.Addresses.route) {
+            AddressesScreen(navController = navController)
+        }
+
+        composable(Routes.Settings.route) {
+            SettingsScreen(navController = navController)
         }
     }
 }

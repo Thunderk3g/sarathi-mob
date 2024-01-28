@@ -20,9 +20,9 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.sarathi.Routes
-import com.example.sarathi.ui.commonWidgets.SarathiButton
-import com.example.sarathi.ui.commonWidgets.SarathiTextField
+import com.example.sarathi.ui.commonUi.Routes
+import com.example.sarathi.ui.commonUi.SarathiButton
+import com.example.sarathi.ui.commonUi.SarathiTextField
 import com.example.sarathi.ui.theme.Sarathi_Yellow
 
 @Composable

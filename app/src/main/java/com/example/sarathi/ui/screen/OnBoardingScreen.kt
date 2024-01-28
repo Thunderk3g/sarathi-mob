@@ -18,9 +18,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.sarathi.Routes
-import com.example.sarathi.ui.commonWidgets.SarathiButton
-import com.example.sarathi.ui.commonWidgets.SarathiTextField
+import com.example.sarathi.ui.commonUi.Routes
+import com.example.sarathi.ui.commonUi.SarathiButton
+import com.example.sarathi.ui.commonUi.SarathiTextField
 import com.example.sarathi.ui.theme.APP_NAME
 import com.example.sarathi.ui.theme.DarkGrey
 import com.example.sarathi.ui.theme.RoseRed

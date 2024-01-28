@@ -1,4 +1,4 @@
-package com.example.sarathi.ui.commonWidgets
+package com.example.sarathi.ui.commonUi
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*

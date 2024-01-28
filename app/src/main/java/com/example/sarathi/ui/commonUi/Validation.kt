@@ -1,4 +1,4 @@
-package com.example.sarathi.ui.commonWidgets
+package com.example.sarathi.ui.commonUi
 
 import java.util.regex.Pattern
 
